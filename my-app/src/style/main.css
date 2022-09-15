@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.signupBtn , .signupBtn:hover, .signupBtn:focus{
+    background-color: #00d277;
+}
+.loginLink{
+    text-align: center;
+}
+.signupForm{
+    border-radius: 1rem;
+    background-color: #ffff;
+}
+.signUpContainer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.errorMsg{
+    color: red;
+    font-size: small;
+}
+.activeNavSection{
+    border-color: hsl(26, 100%, 55%);
+    --tw-text-opacity: 75%;
+    color: hsl(0, 0%, 0% / var(--tw-text-opacity));
+}
+.cartIcon{
+position: relative;
+}
+.numCartItems{
+    position: absolute;
+    right: 0px;
+    top: -8px;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 50%;
+    color: #fff;
+    padding: 0% 10%;
+}
+.productCard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.image-gallery-thumbnail{
+    border-radius: 3px;
+}
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus, .image-gallery-thumbnail:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+    opacity: 50%;
+}
+.productDetailsContainer{
+    margin: 8% 5%;
+}
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 80px);
+    border-radius: 3px;
+}
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+    vertical-align: middle;
+    width: 100%;
+    line-height: 0;
+    border-radius: 3px;
+}
+
+.addtoCartBtn{
+    background-color:hsl(26, 100%, 55%) ;
+    color: #fff;
+}
+.addtoCartBtn:hover,.addtoCartBtn:focus{
+    opacity: 50%;
+    background-color:hsl(26, 100%, 55%) ;
+
+}
+.counter{
+    background-color: rgb(242, 244, 246);
+}
