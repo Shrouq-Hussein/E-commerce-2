@@ -3,7 +3,7 @@ import { RootState, AppThunk } from '../store';
 import { userLoginService } from './users.services';
 import { Product } from '../typesIndex';
 import { User, CartItem } from "../typesIndex"
-import{store} from "../store"
+import { store } from "../store"
 
 const users: Array<User> = [
   {
@@ -106,6 +106,9 @@ export const UsersSlice = createSlice({
       state.currentUser = action.payload
       console.log(state.currentUser)
     },
+    addUser:(state, action: PayloadAction<User>)=>{
+      state.AllUsers=state.AllUsers.concat(action.payload)
+    },
     getCartItems: (state) => {
       state = state
     },
@@ -128,7 +131,7 @@ export const UsersSlice = createSlice({
   },
 });
 
-export const { userLogin, addtoCart, updateCart, getCartItems, logUserIn } = UsersSlice.actions;
+export const { userLogin, addtoCart, updateCart, getCartItems, logUserIn ,addUser} = UsersSlice.actions;
 
 export const selectCurrentUser = (state: RootState) => state.users.currentUser;
 export const selectCurrentUserCart = (state: RootState) => state.users.cart;
@@ -178,6 +181,30 @@ export const userlogin =
 
       }
     };
+
+
+export const userSignup = (username: string, email: string, password: string): AppThunk =>
+  (dispatch, getState) => {
+    const allUsers = selectAllUsers(getState())
+    console.log(allUsers)
+    const sameEmail = allUsers.filter((user) => (user.email === email))
+    if (sameEmail.length === 1) {
+      alert()
+    }
+    else {
+      const newUser =
+      {
+        "id": Date.now(),
+        "email": email,
+        "username": username,
+        "password": password,
+        "cart": []
+      }
+      dispatch(addUser(newUser))
+      console.log(selectAllUsers(getState()))
+    }
+
+  };
 
 export default UsersSlice.reducer;
 
