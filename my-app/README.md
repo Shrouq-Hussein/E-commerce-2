@@ -9,9 +9,7 @@ This is a submission to the Fast Track Final Project
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+
 
 
 
@@ -53,8 +51,4 @@ Users should be able to:
 ### Commands needed to run your porjects
 #### npm :  npm start
 
-### what-i-learned
-### continued-development
-### Useful resources
 
-- [resource 1](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter-ts?from-embed=&file=/src/features/counter/counterSlice.ts:2591-2661) - This helped me use Redux toolkit with typescript.
